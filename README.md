@@ -92,7 +92,7 @@ This repository contains a synthesizable RTL implementation of a synchronous AXI
 
 <p>
   <img src="https://img.shields.io/badge/SystemVerilog-gray?style=for-the-badge" alt="System Verilog" />
-  <img src="(https://img.shields.io/badge/Vivado-gray?style=for-the-badge&logo=xilinx&logoColor=white)
+  <img src="(https://img.shields.io/badge/Vivado(AMD)-gray?style=for-the-badge)
 " alt="Xilinx (AMD) Vivado" />
 </p>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -129,7 +129,7 @@ This is an ongoing project.
 
 ### Prerequisites
 
-The only prerequisite is install the <p align="right">(<a href="(https://gcc.gnu.org/install/)">GCC</a>)</p> toolchain.
+You will need Vivado version 19 or above to run this project as-is.
 
 
 ### Installation
@@ -185,11 +185,14 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the Repository
+2. Clone your fork: 
+  `bash
+  git clone https://github.com/YOUR_USERNAME/axi5_to_ahb5_lite_bridge.git`
+3. git checkout -b feature/<your-task-name>
+3. Commit your Changes (`git commit -m 'Add a meaning ful message'`)
+4. Push to the Branch (`git push origin feature/<your-task-name>`)
+5. Open a Pull Request <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">PR)</a> and describe your changes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
