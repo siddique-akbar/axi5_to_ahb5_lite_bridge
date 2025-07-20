@@ -166,17 +166,15 @@ The only prerequisite is install the <p align="right">(<a href="(https://gcc.gnu
 
 
 <!-- ROADMAP -->
-<!-- ## Roadmap
+## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Single transaction for all channels of AXI to AHB
+- [ ] AXI burst `INCR` mode to AHB for all channels
 
 See the [open issues](https://github.com/siddique-akbar/axi5_to_ahb5_lite_bridge/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
- -->
+
 
 
 <!-- CONTRIBUTING -->
