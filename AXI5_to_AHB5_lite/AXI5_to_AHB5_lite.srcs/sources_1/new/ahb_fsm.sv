@@ -21,6 +21,7 @@
 
 
 module ahb_fsm(
-
+   input logic [31:0] haddr,
+input logic hwrite
     );
 endmodule
