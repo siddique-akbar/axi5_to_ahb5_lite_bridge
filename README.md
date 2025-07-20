@@ -187,10 +187,10 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Repository (this step isn't need for invited contributors)
 2. Clone your fork: 
-  `bash
+  ```bash
   git clone https://github.com/YOUR_USERNAME/axi5_to_ahb5_lite_bridge.git`
   if you are invited contributor then:
-  `bash
+  ```bash
   git clone https://github.com/siddique-akbar/axi5_to_ahb5_lite_bridge.git`
 3. git checkout -b feature/<your-task-name>  (make feature or whatever your choice or create a branch if directed in the issue assigned to you)
 3. Commit your Changes (`git commit -a -m 'Add a meaning ful message'`)
