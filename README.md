@@ -185,13 +185,16 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Repository
+1. Fork the Repository (this step isn't need for invited contributors)
 2. Clone your fork: 
   `bash
   git clone https://github.com/YOUR_USERNAME/axi5_to_ahb5_lite_bridge.git`
-3. git checkout -b feature/<your-task-name>
-3. Commit your Changes (`git commit -m 'Add a meaning ful message'`)
-4. Push to the Branch (`git push origin feature/<your-task-name>`)
+  if you are invited contributor then:
+  `bash
+  git clone https://github.com/siddique-akbar/axi5_to_ahb5_lite_bridge.git`
+3. git checkout -b feature/<your-task-name>  (make feature or whatever your choice or create a branch if directed in the issue assigned to you)
+3. Commit your Changes (`git commit -a -m 'Add a meaning ful message'`)
+4. Push to the Branch (`git push origin <whatever branch you created>`)
 5. Open a Pull Request <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">PR)</a> and describe your changes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -207,7 +210,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the project_license. See `LICENSE.txt` for more information.
+Distributed under Creative Commons Zero v1.0 Universal `CC0-1.0`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
