@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_uart_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_uart_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1501000000001fs"></ZoomEndTime>
+      <Cursor1Time time="6445000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="178"></NameColumnWidth>
+      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/top_uart_tb/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/rx_data" type="logic">
+      <obj_property name="ElementShortName">rx_data</obj_property>
+      <obj_property name="ObjectShortName">rx_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u2/bclk" type="logic">
+      <obj_property name="ElementShortName">bclk</obj_property>
+      <obj_property name="ObjectShortName">bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/bclk8x" type="logic">
+      <obj_property name="ElementShortName">bclk8x</obj_property>
+      <obj_property name="ObjectShortName">bclk8x</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u2/tx_status" type="logic">
+      <obj_property name="ElementShortName">tx_status</obj_property>
+      <obj_property name="ObjectShortName">tx_status</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u2/THR" type="array">
+      <obj_property name="ElementShortName">THR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">THR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u2/TSR" type="array">
+      <obj_property name="ElementShortName">TSR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">TSR[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/data_correct" type="logic">
+      <obj_property name="ElementShortName">data_correct</obj_property>
+      <obj_property name="ObjectShortName">data_correct</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/bclk" type="logic">
+      <obj_property name="ElementShortName">bclk</obj_property>
+      <obj_property name="ObjectShortName">bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/bclk8x" type="logic">
+      <obj_property name="ElementShortName">bclk8x</obj_property>
+      <obj_property name="ObjectShortName">bclk8x</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/rx_status" type="logic">
+      <obj_property name="ElementShortName">rx_status</obj_property>
+      <obj_property name="ObjectShortName">rx_status</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/sample_counter" type="array">
+      <obj_property name="ElementShortName">sample_counter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_counter[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/rx_state" type="array">
+      <obj_property name="ElementShortName">rx_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/rx_nextstate" type="array">
+      <obj_property name="ElementShortName">rx_nextstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_nextstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/RHR" type="array">
+      <obj_property name="ElementShortName">RHR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">RHR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/bit_count" type="array">
+      <obj_property name="ElementShortName">bit_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/rx_data2" type="logic">
+      <obj_property name="ElementShortName">rx_data2</obj_property>
+      <obj_property name="ObjectShortName">rx_data2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/RSR" type="array">
+      <obj_property name="ElementShortName">RSR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">RSR[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/u1/u1/RSR_next" type="array">
+      <obj_property name="ElementShortName">RSR_next[9:0]</obj_property>
+      <obj_property name="ObjectShortName">RSR_next[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/sel_baud" type="array">
+      <obj_property name="ElementShortName">sel_baud[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_baud[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_uart_tb/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+   </wvobject>
+</wave_config>
