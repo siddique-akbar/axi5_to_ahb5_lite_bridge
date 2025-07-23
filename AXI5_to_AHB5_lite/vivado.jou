@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jul 23 21:40:17 2025
+# Process ID: 10748
+# Current directory: E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9568 E:\courseproject_NCDC_cohort3\AXI2AHB_liteBridge\axi5_to_ahb5_lite_bridge\AXI5_to_AHB5_lite\AXI5_to_AHB5_lite.xpr
+# Log file: E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/vivado.log
+# Journal file: E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/axi5_to_ahb5_lite_TOP_TB_behav.wcfg
+source axi5_to_ahb5_lite_TOP_TB.tcl
+relaunch_sim
+relaunch_sim
+restart
+run 120 ns
+run 120 ns
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/axi5_to_ahb5_lite_TOP_TB_behav.wcfg
+source axi5_to_ahb5_lite_TOP_TB.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run 120 ns
+relaunch_sim
+restart
+run 120 ns
+relaunch_sim
+restart
+run 120 ns
+run 120 ns
+restart
+run 100 ns
+run 100 ns
+relaunch_sim
+restart
+run 100 ns
+run 100 ns
+relaunch_sim
+relaunch_sim
+restart
+run 100 ns
+run 100 ns
+relaunch_sim
+relaunch_sim
+restart
+run 100 ns
+run 100 ns
+close_sim

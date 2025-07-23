@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jul 23 14:02:48 2025
+# Process ID: 15000
+# Current directory: E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13408 E:\courseproject_NCDC_cohort3\AXI2AHB_liteBridge\axi5_to_ahb5_lite_bridge\AXI5_to_AHB5_lite\AXI5_to_AHB5_lite.xpr
+# Log file: E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/vivado.log
+# Journal file: E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.srcs/sources_1/new/ahb_fsm.sv]
+set_property is_enabled false [get_files  E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.srcs/sources_1/new/ahb_master_interface.sv]
+set_property is_enabled false [get_files  E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.srcs/sources_1/new/axi_read_fsm.sv]
+set_property is_enabled false [get_files  E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.srcs/sources_1/new/axi_slave_interface.sv]
+set_property is_enabled false [get_files  E:/courseproject_NCDC_cohort3/AXI2AHB_liteBridge/axi5_to_ahb5_lite_bridge/AXI5_to_AHB5_lite/AXI5_to_AHB5_lite.srcs/sources_1/new/time_out.sv]
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+refresh_design
+write_schematic -format pdf -orientation portrait E:/Project_AXI2AHB_bridge/axi2ahb_bridge/axi2ahb_bridge.srcs/Write_FSM_only.pdf
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+refresh_design
+refresh_design
+refresh_design

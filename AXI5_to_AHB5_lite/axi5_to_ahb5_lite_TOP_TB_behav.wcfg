@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="axi5_to_ahb5_lite_TOP_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi5_to_ahb5_lite_TOP_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="52000800fs"></ZoomStartTime>
+      <ZoomEndTime time="172000801fs"></ZoomEndTime>
+      <Cursor1Time time="90843000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="238"></NameColumnWidth>
+      <ValueColumnWidth column_width="170"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="40" />
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_ACLK" type="logic">
+      <obj_property name="ElementShortName">s_ACLK</obj_property>
+      <obj_property name="ObjectShortName">s_ACLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_ARESETn" type="logic">
+      <obj_property name="ElementShortName">s_ARESETn</obj_property>
+      <obj_property name="ObjectShortName">s_ARESETn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_AWVALID" type="logic">
+      <obj_property name="ElementShortName">s_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">s_AWVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_WVALID" type="logic">
+      <obj_property name="ElementShortName">s_WVALID</obj_property>
+      <obj_property name="ObjectShortName">s_WVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_ARVALID" type="logic">
+      <obj_property name="ElementShortName">s_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">s_ARVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HREADY" type="logic">
+      <obj_property name="ElementShortName">m_HREADY</obj_property>
+      <obj_property name="ObjectShortName">m_HREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/m_HTRANS" type="array">
+      <obj_property name="ElementShortName">m_HTRANS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m_HTRANS[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/W_strt_ahb" type="logic">
+      <obj_property name="ElementShortName">W_strt_ahb</obj_property>
+      <obj_property name="ObjectShortName">W_strt_ahb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/write_fsm_ahb_flag" type="logic">
+      <obj_property name="ElementShortName">write_fsm_ahb_flag</obj_property>
+      <obj_property name="ObjectShortName">write_fsm_ahb_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_AWADDR" type="array">
+      <obj_property name="ElementShortName">s_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_AWADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_AWREADY" type="logic">
+      <obj_property name="ElementShortName">s_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">s_AWREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_WREADY" type="logic">
+      <obj_property name="ElementShortName">s_WREADY</obj_property>
+      <obj_property name="ObjectShortName">s_WREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/s_ARREADY" type="logic">
+      <obj_property name="ElementShortName">s_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">s_ARREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_WDATA" type="array">
+      <obj_property name="ElementShortName">s_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_BVALID" type="logic">
+      <obj_property name="ElementShortName">s_BVALID</obj_property>
+      <obj_property name="ObjectShortName">s_BVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_BREADY" type="logic">
+      <obj_property name="ElementShortName">s_BREADY</obj_property>
+      <obj_property name="ObjectShortName">s_BREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_BRESP" type="array">
+      <obj_property name="ElementShortName">s_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_ARADDR" type="array">
+      <obj_property name="ElementShortName">s_ARADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ARADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_RVALID" type="logic">
+      <obj_property name="ElementShortName">s_RVALID</obj_property>
+      <obj_property name="ObjectShortName">s_RVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_RREADY" type="logic">
+      <obj_property name="ElementShortName">s_RREADY</obj_property>
+      <obj_property name="ObjectShortName">s_RREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_RDATA" type="array">
+      <obj_property name="ElementShortName">s_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/s_RRESP" type="array">
+      <obj_property name="ElementShortName">s_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HCLK" type="logic">
+      <obj_property name="ElementShortName">m_HCLK</obj_property>
+      <obj_property name="ObjectShortName">m_HCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HRESETn" type="logic">
+      <obj_property name="ElementShortName">m_HRESETn</obj_property>
+      <obj_property name="ObjectShortName">m_HRESETn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HADDR" type="array">
+      <obj_property name="ElementShortName">m_HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HWRITE" type="logic">
+      <obj_property name="ElementShortName">m_HWRITE</obj_property>
+      <obj_property name="ObjectShortName">m_HWRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HWDATA" type="array">
+      <obj_property name="ElementShortName">m_HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HRESP" type="logic">
+      <obj_property name="ElementShortName">m_HRESP</obj_property>
+      <obj_property name="ObjectShortName">m_HRESP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/m_HRDATA" type="array">
+      <obj_property name="ElementShortName">m_HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/AW_sel" type="logic">
+      <obj_property name="ElementShortName">AW_sel</obj_property>
+      <obj_property name="ObjectShortName">AW_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/AW_en" type="logic">
+      <obj_property name="ElementShortName">AW_en</obj_property>
+      <obj_property name="ObjectShortName">AW_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/W_sel" type="logic">
+      <obj_property name="ElementShortName">W_sel</obj_property>
+      <obj_property name="ObjectShortName">W_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/W_en" type="logic">
+      <obj_property name="ElementShortName">W_en</obj_property>
+      <obj_property name="ObjectShortName">W_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/H_sel" type="logic">
+      <obj_property name="ElementShortName">H_sel</obj_property>
+      <obj_property name="ObjectShortName">H_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/H_en" type="logic">
+      <obj_property name="ElementShortName">H_en</obj_property>
+      <obj_property name="ObjectShortName">H_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/wfsm_AWREADY" type="logic">
+      <obj_property name="ElementShortName">wfsm_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">wfsm_AWREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/wfsm_u1/wfsm_AWREADY_next" type="logic">
+      <obj_property name="ElementShortName">wfsm_AWREADY_next</obj_property>
+      <obj_property name="ObjectShortName">wfsm_AWREADY_next</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi5_to_ahb5_lite_TOP_TB/dut/read_fsm_ahb_flag" type="logic">
+      <obj_property name="ElementShortName">read_fsm_ahb_flag</obj_property>
+      <obj_property name="ObjectShortName">read_fsm_ahb_flag</obj_property>
+   </wvobject>
+</wave_config>
