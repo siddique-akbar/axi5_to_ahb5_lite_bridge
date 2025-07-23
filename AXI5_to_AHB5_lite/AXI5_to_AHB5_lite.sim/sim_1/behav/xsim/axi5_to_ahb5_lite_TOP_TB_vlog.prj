@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../AXI5_to_AHB5_lite.srcs/sources_1/new/axi5_to_ahb5_lite_TOP.sv" \
+"../../../../AXI5_to_AHB5_lite.srcs/sources_1/new/axi_write_fsm.sv" \
+"../../../../AXI5_to_AHB5_lite.srcs/sim_1/new/axi5_to_ahb5_lite_TOP_TB.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
