@@ -117,7 +117,7 @@ module axi5_to_ahb5_lite_TOP#(
     assign m_HRESETn = s_ARESETn;
 
     always_ff @(posedge s_ACLK or negedge s_ARESETn)
-        if(s_ARESETn)
+        if(!s_ARESETn)
             AWADDR_copy <= 'b0;
         else if(AW_en)
             AWADDR_copy <= s_AWADDR;
@@ -125,7 +125,7 @@ module axi5_to_ahb5_lite_TOP#(
             AWADDR_copy <= AWADDR_copy;
 
     always_ff @(posedge s_ACLK or negedge s_ARESETn)
-        if(s_ARESETn)
+        if(!s_ARESETn)
             WDATA_copy <= 'b0;
         else if(W_en)
             WDATA_copy <= s_WDATA;
@@ -135,7 +135,7 @@ module axi5_to_ahb5_lite_TOP#(
     assign AWADDR_final = AW_sel ? AWADDR_copy : s_AWADDR;
     
     always_ff @(posedge s_ACLK or negedge s_ARESETn)
-        if(s_ARESETn)
+        if(!s_ARESETn)
             hresp1 <= 'b0;
         else if(H_en)
             hresp1 <= m_HRESP;
@@ -146,13 +146,14 @@ module axi5_to_ahb5_lite_TOP#(
     //======= Read transaction relevant logic ========
     logic AR_sel, AR_en, R_strt_ahb, H_R_sel, H_R_en, hresp2;
     logic [ADDR_WIDTH-1:0] ARADDR_copy, ARADDR_final;
+    logic [DATA_WIDTH-1:0] HRDATA_copy, HRDATA_final;
     axi_read_fsm rfsm_u2(.rfsm_ACLK(s_ACLK), .rfsm_ARESETn(s_ARESETn), .rfsm_ARVALID(s_ARVALID), 
     .rfsm_ARREADY(s_ARREADY), .rfsm_RVALID(s_RVALID), .rfsm_RREADY(s_RREADY), .AR_sel, .AR_en, 
     .R_strt_ahb, .read_fsm_ahb_flag, .H_R_sel, .H_R_en, .rfsm_HREADY(m_HREADY), .write_fsm_ahb_flag
     );
 
     always_ff @(posedge s_ACLK or negedge s_ARESETn)
-        if(s_ARESETn)
+        if(!s_ARESETn)
             ARADDR_copy <= 'b0;
         else if(AR_en)
             ARADDR_copy <= s_ARADDR;
@@ -161,13 +162,22 @@ module axi5_to_ahb5_lite_TOP#(
     assign ARADDR_final = AR_sel ? ARADDR_copy : s_ARADDR;
 
     always_ff @(posedge s_ACLK or negedge s_ARESETn)
-        if(s_ARESETn)
+        if(!s_ARESETn)
             hresp2 <= 'b0;
         else if(H_R_en)
             hresp2 <= m_HRESP;
         else
             hresp2 <= hresp2;
     assign s_RRESP = H_R_sel ? {1'b0, hresp1, 1'b0} : {1'b0, m_HRESP, 1'b0};
+
+    always_ff @(posedge s_ACLK or negedge s_ARESETn)
+        if(!s_ARESETn)
+            HRDATA_copy <= 'b0;
+        else if(H_R_en)
+            HRDATA_copy <= m_HRDATA;
+        else
+            HRDATA_copy <= HRDATA_copy;
+    assign s_RDATA = H_R_sel ? HRDATA_copy : m_HRDATA;
 
 //common driven by write and read fsm toward ahb
     assign m_HTRANS = {W_strt_ahb|R_strt_ahb, 1'b0};
