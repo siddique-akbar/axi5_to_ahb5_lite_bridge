@@ -106,7 +106,6 @@ module axi5_to_ahb5_lite_TOP#(
     logic [ADDR_WIDTH-1:0] AWADDR_copy, AWADDR_final;
     logic [DATA_WIDTH-1:0] WDATA_copy;
     logic hresp1;
-    assign s_RVALID = 1'b0;
     axi_write_fsm wfsm_u1(.wfsm_ACLK(s_ACLK), .wfsm_ARESETn(s_ARESETn), .wfsm_AWVALID(s_AWVALID), 
     .wfsm_AWREADY(s_AWREADY), .wfsm_WVALID(s_WVALID), .wfsm_WREADY(s_WREADY), .wfsm_BVALID(s_BVALID), 
     .wfsm_BREADY(s_BREADY), .wfsm_ARVALID(s_ARVALID), .wfsm_RVALID(s_RVALID), .wfsm_RREADY(s_RREADY), .AW_sel, 
