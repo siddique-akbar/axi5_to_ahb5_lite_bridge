@@ -74,14 +74,30 @@ module axi5_to_ahb5_lite_TOP_TB;
   always #5 s_ACLK = ~s_ACLK;
 
   initial begin
+
+    // for single beat read fixed settings are given below
+    s_ARID = 4'h2;
+    s_ARLEN = 8'd0;            // Single transfer
+    s_ARSIZE = 3'b010;         // 4 bytes
+    s_ARBURST = 2'b01;         // INCR is the mode of AXI for single transfer
+    s_ARLOCK = 1'b0;  //disabled option
+    s_ARCACHE = 4'b0000;   //not used
+    s_ARPROT = 3'b000;    /// not used
+    s_ARQOS = 4'b0000;    // not used 
+    s_ARREGION = 4'b0000;  // not used
+    s_ARUSER = 1'b0;           // not used here
+
+    s_ARADDR = 32'h1000_0004; // A new address, different from write
+
     s_ACLK = 0;
     s_ARESETn = 0;
     m_HREADY = 1;     // AHB slave is always ready
     m_HRESP = 0;
     m_HRDATA = 32'hA5A5A5A5;
+    s_ARADDR = 0;
 
     // Reset
-    #20;
+    #6;
     s_ARESETn = 1;
     #10
     
@@ -97,7 +113,7 @@ module axi5_to_ahb5_lite_TOP_TB;
     s_AWSIZE  = 3'b010;      // 4 bytes
     s_AWBURST = 2'b01;       // INCR
     s_WDATA   = 32'hDEADBEEF;
-//============AW only followed by W transaction start here===========
+  //============AW only followed by W transaction start here===========
     s_AWVALID = 1;
     s_WVALID  = 0;
     s_BREADY  = 1;
@@ -116,9 +132,9 @@ module axi5_to_ahb5_lite_TOP_TB;
       $display("AXI Write Response OKAY.");
     else
       $display("AXI Write Response ERROR: BRESP = %b", s_BRESP);
-//============AW only followed by W transaction end here===========
-    #5;
-//============W only followed by AW transaction start here===========
+  //============AW only followed by W transaction end here===========
+    #1;
+  //============W only followed by AW transaction start here===========
     s_AWVALID = 0;
     s_WVALID  = 1;
     s_BREADY  = 1;
@@ -137,32 +153,57 @@ module axi5_to_ahb5_lite_TOP_TB;
       $display("AXI Write Response OKAY.");
     else
       $display("AXI Write Response ERROR: BRESP = %b", s_BRESP);
-//============W only followed by AW transaction end here ===========    
-    #5;
-//============AW + W in same cycle transaction start here ===========
-    s_AWVALID = 1;
-    s_WVALID  = 1;
-    s_BREADY  = 1;
-    $display("herer");
-    wait (s_WREADY == 1); //#10;
-    s_WVALID = 0;
-    s_BREADY = 0;
-    $display("here1");
+  //============W only followed by AW transaction end here ===========    
+    #1;
+  //============AW + W in same cycle transaction start here ===========
     // s_AWVALID = 1;
-    wait (s_AWREADY == 1); #10;
-    s_AWVALID = 0;
+    // #0.01;
+    // s_WVALID  = 1;
+    // s_BREADY  = 1;
+    // $display("herer");
+    // wait (s_WREADY == 1); //#10;
+    // s_WVALID = 0;
+    // s_BREADY = 0;
+    // $display("here1");
+    // // s_AWVALID = 1;
+    // wait (s_AWREADY == 1); #10;
+    // s_AWVALID = 0;
 
-    // Wait for BVALID
-    $display("here2");
-    wait (s_BVALID == 1); #30;
-    s_BREADY = 1;
-    if (s_BRESP == 2'b00)
-      $display("AXI Write Response OKAY.");
-    else
-      $display("AXI Write Response ERROR: BRESP = %b", s_BRESP);
-//============AW + W in same cycle transaction end here ===========
+    // // Wait for BVALID
+    // $display("here2");
+    // wait (s_BVALID == 1); #30;
+    // s_BREADY = 1;
+    // if (s_BRESP == 2'b00)
+    //   $display("AXI Write Response OKAY.");
+    // else
+    //   $display("AXI Write Response ERROR: BRESP = %b", s_BRESP);
+  //============AW + W in same cycle transaction end here ===========
+
+
+    // // Set up the read address and signals
+    // s_ARVALID = 1;
+
+    // // Ready for read, indicate the AXI system is prepared for receiving
+    // wait (s_ARREADY == 1); #10;
+    // s_ARVALID = 0;  // Done sending read address
+
+    // // Wait for the read data
+    // s_RREADY = 1;   // We are ready to accept the data
+    // wait (s_RVALID == 1); #10;  // Wait until RVALID is high
+
+    // // Check the read data response
+    // $display("Read Data: %h", s_RDATA);
+    // $display("Read Response: %b", s_RRESP);
+    // if (s_RRESP == 2'b00)  // OKAY response
+    //   $display("AXI Read Response OKAY.");
+    // else
+    //   $display("AXI Read Response ERROR: RRESP = %b", s_RRESP);
+
+    // //============AXI Read Transaction End here===========
+
+    // // Wait and finish
     #50;
     $finish;
-  end
+end
 
 endmodule

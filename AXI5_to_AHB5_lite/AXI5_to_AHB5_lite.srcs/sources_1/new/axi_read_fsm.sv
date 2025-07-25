@@ -114,7 +114,7 @@ module axi_read_fsm #(
     //ouput signals next value for interfaces
     logic rfsm_ARREADY_next;
     //internal logic signal next value
-    logic read_fsm_ahb_flag, AR_sel, AR_en, r_strt_ahb, H_R_en, H_R_sel;
+    logic read_fsm_ahb_flag, AR_sel, AR_en, R_strt_ahb, H_R_en, H_R_sel;
 
     logic rfsm_RVALID_next;
 
@@ -148,26 +148,26 @@ module axi_read_fsm #(
                         rfsm_ARREADY_next = 1'b1;
                         if(rfsm_HREADY) begin
                             next_rstate = R_AHB_DATA;
-                            {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} = 
+                            {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} = 
                             {1'b1,              1'b0,   1'b0,   1'b1,        1'b0,   1'b0};
                         end
                         else begin
                             next_rstate = R_AHB_WAIT;
-                            {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} = 
+                            {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} = 
                             {1'b1,              1'b0,   1'b1,   1'b1,        1'b0,   1'b0};
                         end
                     end
                     2'b11: begin
                         rfsm_ARREADY_next = 1'b1;
                         next_rstate = R_WRITE_WAIT;
-                        {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                        {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                         {1'b0,              1'b0,   1'b1,   1'b0,        1'b0,   1'b0};
                     end
                     default: begin
                         next_rstate = READY;
                         rfsm_ARREADY_next = 1'b1;
                         rfsm_RVALID_next = 1'b0;
-                        {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                        {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                         {1'b0,              1'b0,   1'b0,   1'b0,        1'b0,   1'b0};
                     end
                 endcase
@@ -176,18 +176,18 @@ module axi_read_fsm #(
                 if(rfsm_HREADY) begin
                     next_rstate = AXI_FORWARD;
                     rfsm_RVALID_next = 1'b1;
-                    {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                    {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                     {1'b1,              1'b0,   1'b0,   1'b0,        1'b1,   1'b0};
                 end
                 else begin
                     next_rstate = R_AHB_DATA;
                     rfsm_RVALID_next = 1'b0;
-                    {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                    {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                     {1'b1,              1'b0,   1'b0,   1'b0,        1'b0,   1'b0};
                 end
             end
             R_AHB_WAIT: begin
-                {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} = 
+                {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} = 
                 {1'b1,              1'b1,   1'b0,   1'b1,        1'b0,   1'b0};
                 if(rfsm_HREADY)
                     next_rstate = R_AHB_DATA;
@@ -198,32 +198,32 @@ module axi_read_fsm #(
                 if(!write_fsm_ahb_flag) begin
                     if(rfsm_HREADY) begin
                         next_rstate = R_AHB_DATA;
-                        {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} = 
+                        {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} = 
                         {1'b1,              1'b1,   1'b0,   1'b1,        1'b0,   1'b0};
                     end
                     else begin
                         next_rstate = R_AHB_WAIT;
-                        {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} = 
+                        {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} = 
                         {1'b1,              1'b1,   1'b0,   1'b1,        1'b0,   1'b0};
                     end
                 end
                 else begin
                     next_rstate = R_WRITE_WAIT;
-                    {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                    {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                     {1'b0,              1'b1,   1'b0,   1'b0,        1'b0,   1'b0};
                 end
             end
             AXI_FORWARD: begin
                 if(rfsm_RREADY) begin
                     next_rstate = READY;
-                    rfsm_ARREADY_next = 1'b1
+                    rfsm_ARREADY_next = 1'b1;
                     rfsm_RVALID_next = 1'b0;
-                    {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                    {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                     {1'b0,              1'b0,   1'b0,   1'b0,        1'b0,   1'b1};
                 end
                 else begin
                     next_rstate = AXI_FORWARD;
-                    {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                    {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                     {1'b1,              1'b0,   1'b0,   1'b0,        1'b0,   1'b1};
                 end
             end
@@ -231,7 +231,7 @@ module axi_read_fsm #(
                 next_rstate = READY;
                 rfsm_RVALID_next = 1'b0;
                 rfsm_ARREADY_next = 1'b1;
-                {read_fsm_ahb_flag, AR_sel, AR_en,  r_strt_ahb, H_R_en, H_R_sel} =
+                {read_fsm_ahb_flag, AR_sel, AR_en,  R_strt_ahb, H_R_en, H_R_sel} =
                 {1'b0,              1'b0,   1'b0,   1'b0,        1'b0,   1'b0};
             end
         endcase
